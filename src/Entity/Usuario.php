@@ -58,7 +58,7 @@ class Usuario
     private $senha;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Endereco", inversedBy="cliente")
+     * @ORM\OneToOne(targetEntity="App\Entity\Endereco", inversedBy="cliente", cascade={"persist"})
      * @ORM\JoinColumn(name="endereco_id", referencedColumnName="id", unique=true)
      */
     private $endereco;
